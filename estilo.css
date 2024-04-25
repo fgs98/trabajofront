@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181419;
+    color: white;
+}
+
+.header {
+    background-color: #9f3647;
+    color: #ffffff;
+    height: 10vh;
+    z-index: 10;
+    top: 0;
+    position: sticky;
+}
+
+.navegacion {
+    display: flex;
+    padding: 1.3rem 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.logoHeader {
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+}
+
+.items-nav {
+    margin-right: 20px;
+}
+
+.item-nav {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+}
+
+.item-nav3 {
+    background-color: #19141a;
+    color: white;
+    border-radius: 5px;
+}
+
+.sectionPrincipal {
+    color: white;
+    background: linear-gradient(to right top, #00000080, #00000080), url(banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.subtitulo1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.botonRegistro {
+    background-color: #9f3647;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.buscador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #19141a;
+    color: white;
+    height: 50vh;
+}
+
+.tituloSection {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.buscadorBarra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.input {
+    border: 2px solid white;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    padding: 0px 20px;
+    width: 500px;
+}
+
+.botonBuscador {
+    background-color: #9f3647;
+    display: inline-block;
+    color: #ffffff;
+    height: 50px;
+    margin: 20px 10px;
+    padding: 0 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.tendencias {
+    width: 82%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tituloTendencia {
+    text-align: center;
+}
+
+.tituloPelicula {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.pelicula {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagenPelicula {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tituloPelicula {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    max-width: 20rem;
+    width: 100%;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    opacity: 0;
+    letter-spacing: 0.1rem;
+}
+
+.boton {
+    background-color: #9f3647;
+    color: #ffffff;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 1rem 1rem;
+    box-sizing: content-box;
+}
+
+.peliculasAclamadas {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tituloAclamadas {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.aclamadasLista {
+    width: 100%;
+    padding: 0px 0px 40px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.aclamada {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 25px;
+    margin-left: 30px;
+    width: 170px;
+    min-width: 170px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.imagenAclamada {
+    height: 95%;
+    width: 95%;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.boton {
+    padding: 0.8rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+
+.tituloAclamadas {
+    font-size: 2rem;
+}
+
+.aclamada {
+    width: 150px;
+    min-width: 150px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.imagenAclamada {
+    width: 90%;
+    height: 90%;
+}
+
+.footer {
+    background-color: #9f3647;
+    color: #ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listaNav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.itemNav {
+    margin-left: 20px;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.footerLinkAdmin {
+    background-color: #181419;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .sectionPrincipal {
+        height: 60vh;
+    }
+
+    .titulo1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo1 {
+        font-size: 1.5rem;
+    }
+
+    .botonRegistro {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+
+    .buscador {
+        height: 30vh;
+    }
+
+    .titulo2 {
+        font-size: 1.6rem;
+    }
+
+    .input {
+        font-size: 1rem;
+        height: 40px;
+        width: 300px;
+    }
+
+    .botonBuscador {
+        height: 40px;
+        padding: 0 15px;
+        font-size: 1rem;
+    }
+
+
+
+    .tendencias {
+        width: 95%;
+    }
+
+    .tituloTendencia {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .peliculas {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        width: 100%;
+    }
+
+    .pelicula {
+        width: 100%;
+        height: 500px;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+}
+
+.seccionPelicula {
+    padding-top: 50px;
+    background: linear-gradient(to right top, #797272a7, #797272a7), url("mario-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.peliculaDetalle {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.creditos-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+
+.trailer {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 70px;
+}
+
+.redesSociales {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-right: 50px;
+}
+
+
+table {
+    width: 100%;
+}
+
+td {
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+
+
+@media screen and (max-width:1200px) {
+    .seccionPelicula {
+        height: initial;
+    }
+
+    .peliculaDetalle {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+    }
+
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .creditos-container {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .trailer {
+        width: 95%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .contenedorTrailer {
+        width: 100%;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .peliculaRRSS {
+        width: 100%;
+    }
+
+    .redesSociales {
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+
+    td {
+        font-size: 1rem;
+    }
+}
+
+.body-registro {
+    height: 100vh;
+    background: linear-gradient(to right top, #24242473, #24242473), url("bg-register.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.seccionRegistro {
+    background-color: rgb(42, 42, 42);
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: 1.2rem;
+}
+
+.tituloRegistro {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+form {
+    width: 100%;
+    padding: 40px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    padding: 0px 20px;
+    background-color: #333333;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #9f3647;
+}
+
+.terminos {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.infoTerminos {
+    margin-left: 10px;
+}
+
+
+.boton {
+    background-color: #9f3647;
+    border: 2px solid #9f3647;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 87%;
+    box-sizing: content-box;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+}
+
+.ayuda {
+    margin-top: 40px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #787878;
+    font-weight: 400;
+
+}
+
+@media (max-width: 1200px) {
+
+
+    .seccionRegistro {
+        width: 95%;
+        padding: 10px 10px;
+    }
+
+    .tituloRegistro {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 100%;
+        text-align: center;
+    }
+
+    input {
+        width: 80%;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .terminos {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 0.7rem;
+    }
+
+    .boton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 70%;
+        padding: 0.9rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .ayuda {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+}
